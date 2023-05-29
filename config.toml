@@ -1,0 +1,44 @@
+theme = "dark_plus"
+
+[editor]
+mouse = false
+[editor.lsp]
+auto-signature-help = false
+
+[keys.insert]
+"C-space" = "normal_mode"
+
+[keys.normal]
+j = "move_char_left"
+"ñ" = "move_char_right"
+k = "move_visual_line_up"
+l = "move_visual_line_down"
+h = "no_op"
+# move lines or groups of lines up or down
+"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal.g]
+j = "goto_line_start"
+"ñ" = "goto_line_end"
+k = "move_line_up"
+l = "move_line_down"
+h = "no_op"
+
+[keys.select]
+j = "extend_char_left"
+"ñ" = "extend_char_right"
+k = "extend_visual_line_up"
+l = "extend_visual_line_down"
+h = "no_op"
+# move lines or groups of lines up or down
+"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.select.g]
+j = "goto_line_start"
+"ñ" = "goto_line_end"
+k = "move_line_up"
+l = "move_line_down"
+h = "no_op"
+

@@ -1,0 +1,4 @@
+[[language]]
+name = "zig"
+file-types = ["zig", "zon"]
+indent = { tab-width = 4, unit = " " }
