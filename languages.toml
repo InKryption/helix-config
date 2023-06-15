@@ -1,6 +1,5 @@
 [language-server.zls.config]
 "zig.zls.includeAtInBuiltins" = true
-"zig.zls.enableSnippets" = false
 
 [[language]]
 name = "zig"

@@ -2,8 +2,10 @@ theme = "dark_plus_custom"
 
 [editor]
 mouse = false
+
 [editor.lsp]
 auto-signature-help = false
+snippets = false
 
 [keys.insert]
 "C-space" = "normal_mode"
