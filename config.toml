@@ -16,9 +16,14 @@ j = "move_char_left"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
 h = "no_op"
+
 # move lines or groups of lines up or down
 "A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+# switch between lower and upper case
+"`" = ["switch_to_uppercase"]
+"´" = ["switch_to_lowercase"]
 
 [keys.normal.g]
 j = "goto_line_start"
@@ -33,9 +38,14 @@ j = "extend_char_left"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
+
 # move lines or groups of lines up or down
 "A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+# switch between lower and upper case
+"`" = ["switch_to_uppercase"]
+"´" = ["switch_to_lowercase"]
 
 [keys.select.g]
 j = "goto_line_start"
