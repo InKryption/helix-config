@@ -6,6 +6,7 @@ mouse = false
 [editor.lsp]
 auto-signature-help = false
 snippets = false
+display-inlay-hints = false
 
 [keys.insert]
 "C-space" = "normal_mode"
@@ -16,6 +17,7 @@ j = "move_char_left"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
 h = "no_op"
+X = "extend_line_above"
 
 # move lines or groups of lines up or down
 "A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
@@ -38,6 +40,7 @@ j = "extend_char_left"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
+X = "extend_line_above"
 
 # move lines or groups of lines up or down
 "A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]

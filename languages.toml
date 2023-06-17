@@ -1,4 +1,12 @@
 [language-server.zls.config]
+"zig.zls.enableSemanticTokens" = true
+"zig.zls.enableInlayHints" = true
+"zig.zls.inlayHintsShowBuiltin" = false
+"zig.zls.inlayHintsExcludeSingleArgument" = true
+"zig.zls.inlayHintsHideRedundantParamNames" = true
+"zig.zls.inlayHintsHideRedundantParamNamesLastToken" = true
+"zig.zls.warnStyle" = true
+"zig.zls.highlightGlobalVarDeclarations" = true
 "zig.zls.includeAtInBuiltins" = true
 
 [[language]]
