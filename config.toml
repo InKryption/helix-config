@@ -2,11 +2,18 @@ theme = "dark_plus_custom"
 
 [editor]
 mouse = false
+bufferline = "multiple"
+color-modes = true
 
 [editor.lsp]
 auto-signature-help = false
 snippets = false
 display-inlay-hints = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "file-encoding"]
+right = ["diagnostics", "selections", "position"]
 
 [keys.insert]
 "C-space" = "normal_mode"
@@ -17,22 +24,30 @@ j = "move_char_left"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
 h = "no_op"
+
+g.j = "goto_line_start"
+g."ñ" = "goto_line_end"
+g.k = "move_line_up"
+g.l = "move_line_down"
+g.h = "no_op"
+
+g.n = "no_op"
+g.u = "goto_previous_buffer"
+g.p = "goto_next_buffer"
+
 X = "extend_line_above"
 
-# move lines or groups of lines up or down
-"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# don't yank deleted stuff - if I want to do that I'll just yd
+d = "delete_selection_noyank"
+"A-d" = "no_op"
 
-# switch between lower and upper case
+# move lines or groups of lines up or down
+"A-l" = ["extend_to_line_bounds", "delete_selection_noyank", "paste_after"]
+"A-k" = ["extend_to_line_bounds", "delete_selection_noyank", "move_line_up", "paste_before"]
+
+# switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
-
-[keys.normal.g]
-j = "goto_line_start"
-"ñ" = "goto_line_end"
-k = "move_line_up"
-l = "move_line_down"
-h = "no_op"
 
 [keys.select]
 j = "extend_char_left"
@@ -40,20 +55,27 @@ j = "extend_char_left"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
+
+g.j = "goto_line_start"
+g."ñ" = "goto_line_end"
+g.k = "move_line_up"
+g.l = "move_line_down"
+g.h = "no_op"
+
+g.n = "no_op"
+g.u = "goto_previous_buffer"
+g.p = "goto_next_buffer"
+
 X = "extend_line_above"
+
+# don't yank deleted stuff - if I want to do that I'll just yd
+d = "delete_selection_noyank"
+"A-d" = "no_op"
 
 # move lines or groups of lines up or down
 "A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-# switch between lower and upper case
+# switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
-
-[keys.select.g]
-j = "goto_line_start"
-"ñ" = "goto_line_end"
-k = "move_line_up"
-l = "move_line_down"
-h = "no_op"
-
