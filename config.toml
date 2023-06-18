@@ -42,8 +42,8 @@ d = "delete_selection_noyank"
 "A-d" = "no_op"
 
 # move lines or groups of lines up or down
-"A-l" = ["extend_to_line_bounds", "delete_selection_noyank", "paste_after"]
-"A-k" = ["extend_to_line_bounds", "delete_selection_noyank", "move_line_up", "paste_before"]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
