@@ -5,6 +5,15 @@ mouse = false
 bufferline = "multiple"
 color-modes = true
 
+[editor.whitespace.render]
+newline = "all"
+
+[editor.whitespace.characters]
+newline = '˙'
+
+[editor.indent-guides]
+render = true
+
 [editor.lsp]
 snippets = false
 auto-signature-help = false
