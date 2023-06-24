@@ -2,7 +2,7 @@ theme = "dark_plus_custom"
 
 [editor]
 mouse = false
-bufferline = "multiple"
+bufferline = "always"
 color-modes = true
 
 [editor.whitespace.render]
@@ -34,6 +34,11 @@ j = "move_char_left"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
 h = "no_op"
+
+z.l = "scroll_down"
+z.k = "scroll_up"
+Z.l = "scroll_down"
+Z.k = "scroll_up"
 
 g.j = "goto_line_start"
 g."ñ" = "goto_line_end"
