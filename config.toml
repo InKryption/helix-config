@@ -4,6 +4,14 @@ theme = "dark_plus_custom"
 mouse = false
 bufferline = "always"
 color-modes = true
+cursorline = true
+cursorcolumn = true
+line-number = "relative"
+
+[editor.cursor-shape]
+normal = "block"
+select = "block"
+insert = "bar"
 
 [editor.whitespace.render]
 newline = "all"
@@ -35,8 +43,11 @@ k = "move_visual_line_up"
 l = "move_visual_line_down"
 h = "no_op"
 
+z.j = "no_op"
 z.l = "scroll_down"
 z.k = "scroll_up"
+
+Z.j = "no_op"
 Z.l = "scroll_down"
 Z.k = "scroll_up"
 
