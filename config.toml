@@ -7,6 +7,10 @@ color-modes = true
 cursorline = true
 cursorcolumn = true
 line-number = "relative"
+auto-format = false
+auto-info = true
+# auto-completion = false
+idle-timeout = 0
 
 [editor.cursor-shape]
 normal = "block"
@@ -41,25 +45,9 @@ j = "move_char_left"
 "ñ" = "move_char_right"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
-h = "no_op"
 
-z.j = "no_op"
-z.l = "scroll_down"
-z.k = "scroll_up"
-
-Z.j = "no_op"
-Z.l = "scroll_down"
-Z.k = "scroll_up"
-
-g.j = "goto_line_start"
-g."ñ" = "goto_line_end"
-g.k = "move_line_up"
-g.l = "move_line_down"
-g.h = "no_op"
-
-g.n = "no_op"
-g.u = "goto_previous_buffer"
-g.p = "goto_next_buffer"
+"ret" = ["open_below", "normal_mode"]
+h = ":toggle-option lsp.display-inlay-hints"
 
 X = "extend_line_above"
 
@@ -79,21 +67,13 @@ c = "change_selection_noyank"
 "´" = ["switch_to_lowercase"]
 
 [keys.select]
+"C-space" = "normal_mode"
+
 j = "extend_char_left"
 "ñ" = "extend_char_right"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
-
-g.j = "goto_line_start"
-g."ñ" = "goto_line_end"
-g.k = "move_line_up"
-g.l = "move_line_down"
-g.h = "no_op"
-
-g.n = "no_op"
-g.u = "goto_previous_buffer"
-g.p = "goto_next_buffer"
 
 X = "extend_line_above"
 
@@ -111,3 +91,45 @@ c = "change_selection_noyank"
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
+
+[keys.normal.g]
+j = "goto_line_start"
+"ñ" = "goto_line_end"
+k = "move_line_up"
+l = "move_line_down"
+h = "no_op"
+
+n = "no_op"
+u = "goto_previous_buffer"
+p = "goto_next_buffer"
+
+[keys.select.g]
+j = "goto_line_start"
+"ñ" = "goto_line_end"
+k = "extend_visual_line_up"
+l = "extend_visual_line_down"
+h = "no_op"
+
+n = "no_op"
+u = "goto_previous_buffer"
+p = "goto_next_buffer"
+
+[keys.normal.z]
+j = "no_op"
+l = "scroll_down"
+k = "scroll_up"
+
+[keys.normal.Z]
+j = "no_op"
+l = "scroll_down"
+k = "scroll_up"
+
+[keys.select.z]
+j = "no_op"
+l = "scroll_down"
+k = "scroll_up"
+
+[keys.select.Z]
+j = "no_op"
+l = "scroll_down"
+k = "scroll_up"

@@ -8,6 +8,7 @@
 "zig.zls.warnStyle" = true
 "zig.zls.highlightGlobalVarDeclarations" = true
 "zig.zls.includeAtInBuiltins" = true
+"zig.zls.includeAtInBuiltins" = true
 
 [[language]]
 name = "zig"
