@@ -38,16 +38,15 @@ center = ["file-name", "file-encoding"]
 right = ["diagnostics", "selections", "position"]
 
 [keys.insert]
-"C-space" = "normal_mode"
+# hack to make entering normal mode not delete auto-inserted whitespace
+"C-space" = ["move_char_left", "normal_mode", "move_char_right"]
 
 [keys.normal]
 j = "move_char_left"
 "ñ" = "move_char_right"
 k = "move_visual_line_up"
 l = "move_visual_line_down"
-
-"ret" = ["open_below", "normal_mode"]
-h = ":toggle-option lsp.display-inlay-hints"
+h = "no_op"
 
 X = "extend_line_above"
 
