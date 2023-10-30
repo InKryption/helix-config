@@ -1,5 +1,5 @@
 [language-server.zls.config]
-"zig.zls.enableSemanticTokens" = true
+"zig.zls.enableSemanticTokens" = false
 "zig.zls.enableInlayHints" = true
 "zig.zls.inlayHintsShowBuiltin" = false
 "zig.zls.inlayHintsExcludeSingleArgument" = true

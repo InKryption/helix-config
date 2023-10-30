@@ -33,9 +33,9 @@ display-inlay-hints = false
 display-messages = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "version-control"]
 center = ["file-name", "file-encoding"]
-right = ["diagnostics", "selections", "position"]
+right = ["workspace-diagnostics", "diagnostics", "primary-selection-length", "selections", "position"]
 
 [keys.insert]
 # hack to make entering normal mode not delete auto-inserted whitespace
@@ -56,10 +56,6 @@ d = "delete_selection_noyank"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
-
-# move lines or groups of lines up or down
-"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
@@ -82,10 +78,6 @@ d = "delete_selection_noyank"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
-
-# move lines or groups of lines up or down
-"A-l" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
