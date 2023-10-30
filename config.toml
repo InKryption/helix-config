@@ -85,7 +85,7 @@ c = "change_selection_noyank"
 
 [keys.normal.g]
 j = "goto_line_start"
-"ñ" = "goto_line_end"
+"ñ" = "goto_line_end_newline"
 k = "move_line_up"
 l = "move_line_down"
 h = "no_op"
@@ -96,7 +96,7 @@ p = "goto_next_buffer"
 
 [keys.select.g]
 j = "goto_line_start"
-"ñ" = "goto_line_end"
+"ñ" = "goto_line_end_newline"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
