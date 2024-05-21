@@ -1,16 +1,39 @@
 [language-server.zls.config]
-"zig.zls.enableSemanticTokens" = false
-"zig.zls.enableInlayHints" = true
-"zig.zls.inlayHintsShowBuiltin" = false
-"zig.zls.inlayHintsExcludeSingleArgument" = true
-"zig.zls.inlayHintsHideRedundantParamNames" = true
-"zig.zls.inlayHintsHideRedundantParamNamesLastToken" = true
-"zig.zls.warnStyle" = true
-"zig.zls.highlightGlobalVarDeclarations" = true
-"zig.zls.includeAtInBuiltins" = true
+# "zig.zls.enable_snippets" = true                                     # Enables snippet completions when the client also supports them
+# "zig.zls.enable_argument_placeholders" = false                       # Whether to enable function argument placeholder completions
+# "zig.zls.enable_build_on_save" = true                                # Whether to enable build-on-save diagnostics
+# "zig.zls.build_on_save_step" = "install"                             # Select which step should be executed on build-on-save
+# "zig.zls.enable_autofix" = true                                      # Whether to automatically fix errors on save. Currently supports adding and removing discards.
+# "zig.zls.semantic_tokens" = "none"                                   # Set level of semantic tokens. Partial only includes information that requires semantic analysis (none, partial, full).
+# "zig.zls.enable_inlay_hints" = true                                  # Enables inlay hint support when the client also supports it
+# "zig.zls.inlay_hints_show_variable_type_hints" = true                # Enable inlay hints for variable types
+# "zig.zls.inlay_hints_show_struct_literal_field_type" = true          # Enable inlay hints for fields in struct and union literals
+# "zig.zls.inlay_hints_show_parameter_name" = false                    # Enable inlay hints for parameter names
+# "zig.zls.inlay_hints_show_builtin" = false                           # Enable inlay hints for builtin functions
+# "zig.zls.inlay_hints_exclude_single_argument" = false                # Don't show inlay hints for single argument calls
+# "zig.zls.inlay_hints_hide_redundant_param_names" = false             # Hides inlay hints when parameter name matches the identifier (e.g. foo: foo)
+# "zig.zls.inlay_hints_hide_redundant_param_names_last_token" = false  # Hides inlay hints when parameter name matches the last token of a parameter node (e.g. foo: bar.foo, foo: &foo)
+# "zig.zls.warn_style" = false                                         # Enables warnings for style guideline mismatches
+# "zig.zls.highlight_global_var_declarations" = false                  # Whether to highlight global var declarations
+# "zig.zls.dangerous_comptime_experiments_do_not_enable" = false       # Whether to use the comptime interpreter
+# "zig.zls.skip_std_references" = false                                # When true, skips searching for references in std. Improves lookup speed for functions in user's code. Renaming and go-to-definition will continue to work as is
+# "zig.zls.prefer_ast_check_as_child_process" = true                   # Favor using zig ast-check instead of ZLS's fork
+# "zig.zls.completion_label_details" = true                            # When false, the function signature of completion results is hidden. Improves readability in some editors
+# "zig.zls.builtin_path" = null                                        # Path to 'builtin;' useful for debugging, automatically set if let null
+# "zig.zls.zig_lib_path" = null                                        # Zig library path, e.g. /path/to/zig/lib/zig, used to analyze std library imports
+# "zig.zls.zig_exe_path" = null                                        # Zig executable path, e.g. /path/to/zig/zig, used to run the custom build runner. If null, zig is looked up in PATH. Will be used to infer the zig standard library path if none is provided
+# "zig.zls.build_runner_path" = null                                   # Path to the build_runner.zig file provided by zls. null is equivalent to ${executable_directory}/build_runner.zig
+# "zig.zls.global_cache_path" = null                                   # Path to a directory that will be used as zig's cache. null is equivalent to ${KnownFolders.Cache}/zls
+# "zig.zls.build_runner_global_cache_path" = null                      # Path to a directory that will be used as the global cache path when executing a projects build.zig. null is equivalent to the path shown by zig env
 
 [[language]]
 name = "zig"
 roots = ["build.zig", "build.zig.zon"]
 file-types = ["zig", "zon"]
 indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "yaml"
+auto-format = false
+formatter = { command = "yamlfmt", args = ["-"] }
+

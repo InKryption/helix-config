@@ -53,6 +53,7 @@ X = "extend_line_above"
 # don't yank deleted stuff - if I want to do that I'll just yd
 d = "delete_selection_noyank"
 "A-d" = "no_op"
+D = "delete_char_backward"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
@@ -60,6 +61,32 @@ c = "change_selection_noyank"
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
+
+# window mode
+space.w.H = "no_op"
+    C-w.H = "no_op"
+space.w.h = "no_op"
+    C-w.h = "no_op"
+
+space.w.J = "swap_view_left"
+    C-w.J = "swap_view_left"
+space.w.j = "jump_view_left"
+    C-w.j = "jump_view_left"
+
+space.w.K = "swap_view_up"
+    C-w.K = "swap_view_up"
+space.w.k = "jump_view_up"
+    C-w.k = "jump_view_up"
+
+space.w.L = "swap_view_down"
+    C-w.L = "swap_view_down"
+space.w.l = "jump_view_down"
+    C-w.l = "jump_view_down"
+
+space.w."Ñ" = "swap_view_right"
+    C-w."Ñ" = "swap_view_right"
+space.w."ñ" = "jump_view_right"
+    C-w."ñ" = "jump_view_right"
 
 [keys.select]
 "C-space" = "normal_mode"
@@ -75,6 +102,7 @@ X = "extend_line_above"
 # don't yank deleted stuff - if I want to do that I'll just yd
 d = "delete_selection_noyank"
 "A-d" = "no_op"
+D = "delete_char_backward"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
@@ -85,7 +113,8 @@ c = "change_selection_noyank"
 
 [keys.normal.g]
 j = "goto_line_start"
-"ñ" = "goto_line_end_newline"
+"ñ" = "goto_line_end"
+"Ñ" = "goto_line_end_newline"
 k = "move_line_up"
 l = "move_line_down"
 h = "no_op"
@@ -96,7 +125,8 @@ p = "goto_next_buffer"
 
 [keys.select.g]
 j = "goto_line_start"
-"ñ" = "goto_line_end_newline"
+"ñ" = "goto_line_end"
+"Ñ" = "goto_line_end_newline"
 k = "extend_visual_line_up"
 l = "extend_visual_line_down"
 h = "no_op"
