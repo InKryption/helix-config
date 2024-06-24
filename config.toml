@@ -132,6 +132,8 @@ i = "goto_window_bottom"
 o = "goto_line_end"
 O = "goto_line_end_newline"
 
+c = "goto_window_center"
+
 h = "no_op"
 j = "no_op"
 k = "no_op"
@@ -158,6 +160,8 @@ e = "goto_window_top"
 i = "goto_window_bottom"
 o = "goto_line_end"
 O = "goto_line_end_newline"
+
+c = "goto_window_center"
 
 h = "no_op"
 j = "no_op"
