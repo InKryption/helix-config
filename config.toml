@@ -39,118 +39,167 @@ right = ["workspace-diagnostics", "diagnostics", "primary-selection-length", "se
 
 [keys.insert]
 # hack to make entering normal mode not delete auto-inserted whitespace
-"C-space" = ["move_char_left", "normal_mode", "move_char_right"]
+"esc" = ["move_char_left", "normal_mode", "move_char_right"]
 
 [keys.normal]
-j = "move_char_left"
-"ñ" = "move_char_right"
-k = "move_visual_line_up"
-l = "move_visual_line_down"
-h = "no_op"
+n = "move_char_left"
+e = "move_visual_line_up"
+i = "move_visual_line_down"
+o = "move_char_right"
 
+# h = "no_op"
+j = "no_op"
+# k = "no_op"
+l = "no_op"
+
+x = "extend_line_below"
 X = "extend_line_above"
 
-# don't yank deleted stuff - if I want to do that I'll just yd
-d = "delete_selection_noyank"
-"A-d" = "no_op"
-D = "delete_char_backward"
+f = "move_next_word_end"
+F = "move_next_long_word_end"
+
+N = "no_op"
+h = "search_next"
+H = "search_prev"
+
+"ret" = "insert_mode"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
+
+"ñ" = "open_below"
+"Ñ" = "open_above"
+
+# don't yank deleted stuff - if I want to do that I'll just yd
+d = "delete_selection_noyank"
+D = "delete_char_backward"
+"A-d" = "no_op"
 
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
 
-# window mode
-space.w.H = "no_op"
-    C-w.H = "no_op"
-space.w.h = "no_op"
-    C-w.h = "no_op"
-
-space.w.J = "swap_view_left"
-    C-w.J = "swap_view_left"
-space.w.j = "jump_view_left"
-    C-w.j = "jump_view_left"
-
-space.w.K = "swap_view_up"
-    C-w.K = "swap_view_up"
-space.w.k = "jump_view_up"
-    C-w.k = "jump_view_up"
-
-space.w.L = "swap_view_down"
-    C-w.L = "swap_view_down"
-space.w.l = "jump_view_down"
-    C-w.l = "jump_view_down"
-
-space.w."Ñ" = "swap_view_right"
-    C-w."Ñ" = "swap_view_right"
-space.w."ñ" = "jump_view_right"
-    C-w."ñ" = "jump_view_right"
+g = "no_op"
 
 [keys.select]
-"C-space" = "normal_mode"
+n = "extend_char_left"
+e = "extend_visual_line_up"
+i = "extend_visual_line_down"
+o = "extend_char_right"
 
-j = "extend_char_left"
-"ñ" = "extend_char_right"
-k = "extend_visual_line_up"
-l = "extend_visual_line_down"
-h = "no_op"
+# h = "no_op"
+j = "no_op"
+k = "no_op"
+l = "no_op"
 
+x = "extend_line_below"
 X = "extend_line_above"
 
-# don't yank deleted stuff - if I want to do that I'll just yd
-d = "delete_selection_noyank"
-"A-d" = "no_op"
-D = "delete_char_backward"
+f = "move_next_word_end"
+F = "move_next_long_word_end"
+
+N = "no_op"
+h = "extend_search_next"
+H = "extend_search_prev"
+
+"ret" = "insert_mode"
 
 c = "change_selection_noyank"
 "A-c" = "no_op"
+
+"ñ" = "open_below"
+"Ñ" = "open_above"
+
+# don't yank deleted stuff - if I want to do that I'll just yd
+d = "delete_selection_noyank"
+D = "delete_char_backward"
+"A-d" = "no_op"
 
 # switch between lower and upper case with accent keys
 "`" = ["switch_to_uppercase"]
 "´" = ["switch_to_lowercase"]
 
-[keys.normal.g]
-j = "goto_line_start"
-"ñ" = "goto_line_end"
-"Ñ" = "goto_line_end_newline"
-k = "move_line_up"
-l = "move_line_down"
+g = "no_op"
+
+# [go]to mode
+[keys.normal.t]
+t = "goto_file_start"
+T = "goto_file_end"
+
+n = "goto_line_start"
+e = "goto_window_top"
+i = "goto_window_bottom"
+o = "goto_line_end"
+O = "goto_line_end_newline"
+
 h = "no_op"
+j = "no_op"
+k = "no_op"
+# l = "no_op"
 
-n = "no_op"
-u = "goto_previous_buffer"
-p = "goto_next_buffer"
+s = "goto_first_nonwhitespace"
+d = "goto_definition"
+D = "goto_declaration"
+y = "goto_type_definition"
+r = "goto_reference"
+m = "goto_implementation"
+"." = "goto_last_modification"
+w = "goto_word"
 
-[keys.select.g]
-j = "goto_line_start"
-"ñ" = "goto_line_end"
-"Ñ" = "goto_line_end_newline"
-k = "extend_visual_line_up"
-l = "extend_visual_line_down"
+l = "goto_previous_buffer"
+"ñ" = "goto_next_buffer"
+
+[keys.select.t]
+t = "goto_file_start"
+T = "goto_file_end"
+
+n = "goto_line_start"
+e = "goto_window_top"
+i = "goto_window_bottom"
+o = "goto_line_end"
+O = "goto_line_end_newline"
+
 h = "no_op"
+j = "no_op"
+k = "no_op"
+# l = "no_op"
 
-n = "no_op"
-u = "goto_previous_buffer"
-p = "goto_next_buffer"
+s = "goto_first_nonwhitespace"
+d = "goto_definition"
+D = "goto_declaration"
+y = "goto_type_definition"
+r = "goto_reference"
+m = "goto_implementation"
+"." = "goto_last_modification"
+w = "goto_word"
+
+l = "goto_previous_buffer"
+"ñ" = "goto_next_buffer"
 
 [keys.normal.z]
+h = "no_op"
 j = "no_op"
-l = "scroll_down"
-k = "scroll_up"
+
+e = "scroll_up"
+i = "scroll_down"
 
 [keys.normal.Z]
+h = "no_op"
 j = "no_op"
-l = "scroll_down"
-k = "scroll_up"
+
+e = "scroll_up"
+i = "scroll_down"
 
 [keys.select.z]
+h = "no_op"
 j = "no_op"
-l = "scroll_down"
-k = "scroll_up"
+
+e = "scroll_up"
+i = "scroll_down"
 
 [keys.select.Z]
+h = "no_op"
 j = "no_op"
-l = "scroll_down"
-k = "scroll_up"
+
+e = "scroll_up"
+i = "scroll_down"
