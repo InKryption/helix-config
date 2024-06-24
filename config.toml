@@ -95,8 +95,8 @@ l = "no_op"
 x = "extend_line_below"
 X = "extend_line_above"
 
-f = "move_next_word_end"
-F = "move_next_long_word_end"
+f = "extend_next_word_end"
+F = "extend_next_long_word_end"
 
 N = "no_op"
 h = "extend_search_next"
