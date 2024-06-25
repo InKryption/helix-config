@@ -62,6 +62,9 @@ N = "no_op"
 h = "search_next"
 H = "search_prev"
 
+y = "yank"
+Y = "yank_joined"
+
 "ret" = "insert_mode"
 
 c = "change_selection_noyank"
