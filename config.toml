@@ -105,6 +105,9 @@ N = "no_op"
 h = "extend_search_next"
 H = "extend_search_prev"
 
+y = "yank"
+Y = "yank_joined"
+
 "ret" = "insert_mode"
 
 c = "change_selection_noyank"
@@ -135,7 +138,8 @@ i = "goto_window_bottom"
 o = "goto_line_end"
 O = "goto_line_end_newline"
 
-c = "goto_window_center"
+c = "find_next_char"
+C = "find_prev_char"
 
 h = "no_op"
 j = "no_op"
@@ -165,7 +169,8 @@ i = "goto_window_bottom"
 o = "goto_line_end"
 O = "goto_line_end_newline"
 
-c = "goto_window_center"
+c = "extend_next_char"
+C = "extend_prev_char"
 
 h = "no_op"
 j = "no_op"
@@ -188,6 +193,8 @@ l = "goto_previous_buffer"
 [keys.normal.z]
 h = "no_op"
 j = "no_op"
+k = "no_op"
+# l = "no_op"
 
 e = "scroll_up"
 i = "scroll_down"
@@ -195,6 +202,8 @@ i = "scroll_down"
 [keys.normal.Z]
 h = "no_op"
 j = "no_op"
+k = "no_op"
+# l = "no_op"
 
 e = "scroll_up"
 i = "scroll_down"
@@ -202,6 +211,8 @@ i = "scroll_down"
 [keys.select.z]
 h = "no_op"
 j = "no_op"
+k = "no_op"
+# l = "no_op"
 
 e = "scroll_up"
 i = "scroll_down"
@@ -209,10 +220,11 @@ i = "scroll_down"
 [keys.select.Z]
 h = "no_op"
 j = "no_op"
+k = "no_op"
+# l = "no_op"
 
 e = "scroll_up"
 i = "scroll_down"
-
 
 [keys.normal.space]
 e = "hover"
