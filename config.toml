@@ -11,6 +11,7 @@ auto-format = false
 auto-info = true
 # auto-completion = false
 idle-timeout = 0
+insert-final-newline = false
 
 [editor.cursor-shape]
 normal = "block"
@@ -35,7 +36,13 @@ display-messages = true
 [editor.statusline]
 left = ["mode", "spinner", "version-control"]
 center = ["file-name", "file-encoding"]
-right = ["workspace-diagnostics", "diagnostics", "primary-selection-length", "selections", "position"]
+right = [
+  "workspace-diagnostics",
+  "diagnostics",
+  "primary-selection-length",
+  "selections",
+  "position",
+]
 
 [keys.insert]
 # hack to make entering normal mode not delete auto-inserted whitespace
