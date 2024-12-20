@@ -1,8 +1,8 @@
-[[language]]
-name = "zig"
-roots = ["build.zig", "build.zig.zon"]
-file-types = ["zig", "zon"]
-indent = { tab-width = 4, unit = "    " }
+# [[language]]
+# name = "zig"
+# roots = ["build.zig", "build.zig.zon"]
+# file-types = ["zig", "zon"]
+# indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "yaml"
