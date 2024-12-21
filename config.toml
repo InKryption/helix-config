@@ -12,6 +12,7 @@ auto-info = true
 # auto-completion = false
 idle-timeout = 0
 insert-final-newline = false
+true-color = true
 
 [editor.cursor-shape]
 normal = "block"
